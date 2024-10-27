@@ -7,9 +7,9 @@ This project aims to provide an efficient and accurate deep learning solution fo
 ### Features
 - **Multimodal Data**: Trains on MRI images and other relevant modalities to improve classification accuracy.
 - **Pre-trained Models**: Utilizes the power of pre-trained models such as:
-  - **ResNet50** for robust feature extraction.
-  - **CLIP** for image-text embeddings.
-  - **DenseNet121** for efficient feature propagation and deep representation learning.
+  - **ResNet50** 
+  - **CLIP**
+  - **DenseNet121** 
 - **Fine-tuning**: The models are fine-tuned on Alzheimer's data to optimize for disease classification tasks.
 - **Lightweight Framework**: Designed to be modular and lightweight, enabling easy experimentation with different neural architectures and datasets.
 
