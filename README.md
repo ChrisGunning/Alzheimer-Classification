@@ -12,9 +12,11 @@ The questions I aimed to address:
 
 ## Data Collection and Preprocessing 
 The initial step of the pipeline involved selecting and pre-processing suitable data. Using 3D MRI scans from the OASIS dataset, I extracted features such as the volume, height, length, and width of various brain regions. However, these regions were not confined to traditional segments; the pipeline also derived features from structures like white matter and the optic chiasm, which are not strictly categorized as segments. I employed FreeSurfer, an open-source tool considered the gold standard for brain segmentation.
-<img src="images/brain1.png" alt="Brain image with highest importance regions highlighted" width="333" height="200">
-<img src="images/brain2.png" alt="Brain image with highest importance regions highlighted" width="333" height="200">
-<img src="images/brain3.png" alt="Brain image with highest importance regions highlighted" width="333" height="200">
+
+
+<img src="images/brain1.png" alt="Brain image with highest importance regions highlighted" width="200" height="150">
+<img src="images/brain2.png" alt="Brain image with highest importance regions highlighted" width="200" height="150">
+<img src="images/brain3.png" alt="Brain image with highest importance regions highlighted" width="200" height="150">
 
 ## Summary Statistics and Rule-Based Models 
 I then focused on computing summary statistics for each brain segment, such as volume and thickness, to simplify interpretation. A Random Forest model trained on these features achieved an accuracy of 87%. While this was promising, it fell short of state-of-the-art performance. I also attempted rule extraction from the Random Forest model. However, as shown Figure 2, a smaller number of rules led to significant performance degradation, highlighting the complexity of the relationships in the data.
