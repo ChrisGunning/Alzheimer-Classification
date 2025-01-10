@@ -3,13 +3,16 @@ This repository contains the code and framework designed to classify Alzheimer's
 
 ## Overview
 The questions I aimed to address:
+
 • How can I use expert knowledge to create more reliable NNs for patient diagnosis?
+
 • How can I create NNs that explain their reasoning behind predictions and make the pro-  cess of diagnosis more transparent?
+
 • How can I incorporate human feedback into the diagnosis model so that the model learns with the expert over time?
 
-### Features
 ## Data Collection and Preprocessing 
-The initial step of the pipeline involved selecting and pre-processing suitable data. Using 3D MRI scans from the OASIS dataset, I extracted features such as the volume, height, length, and width of various brain regions. However, these regions were not confined to traditional segments; the pipeline also derived features from structures like white matter and the optic chiasm, which are not strictly categorized as segments. To do this, I employed FreeSurfer, an open-source tool considered the gold standard for brain segmentation.
+The initial step of the pipeline involved selecting and pre-processing suitable data. Using 3D MRI scans from the OASIS dataset, I extracted features such as the volume, height, length, and width of various brain regions. However, these regions were not confined to traditional segments; the pipeline also derived features from structures like white matter and the optic chiasm, which are not strictly categorized as segments. I employed FreeSurfer, an open-source tool considered the gold standard for brain segmentation.
+![Brain image with highest importance regions highlighted](images/brain1)
 
 ## Summary Statistics and Rule-Based Models 
 I then focused on computing summary statistics for each brain segment, such as volume and thickness, to simplify interpretation. A Random Forest model trained on these features achieved an accuracy of 87%. While this was promising, it fell short of state-of-the-art performance. I also attempted rule extraction from the Random Forest model. However, as shown Figure 2, a smaller number of rules led to significant performance degradation, highlighting the complexity of the relationships in the data.
